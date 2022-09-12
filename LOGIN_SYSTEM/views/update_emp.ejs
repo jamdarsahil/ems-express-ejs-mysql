@@ -1,0 +1,80 @@
+<!-- include header -->
+<%- include('include/_header') %>
+    <!-- /include header -->
+
+    <!-- Main Site -->
+    <main id="site-main">
+        <div class="container">
+            <div class="box-nav box-nav-back d-flex justify-between">
+                <a href="/admin-login/show-emp" class="border-shadow">
+                    <span class="text-gradient"><i class="icon fas fa-angle-double-left"></i> All Employees</span>
+                </a>
+            </div>
+            <div class="form-title text-center">
+                <h2 class="text-gradient">Update Employee</h2>
+            </div>
+
+            <!-- add user form -->
+            <!-- form handling -->
+            <form method="POST" id="update_emp">
+                <div class="new_emp">
+                    <div class="form-group">
+                        <label for="name" class="custom-text-light">Name</label>
+                        <input type="text" name="empName" value=<%=data[0].empName%> placeholder="Tony Stark">
+                    </div>
+                    <div class="form-group">
+                        <label for="Email" class="custom-text-light">Email</label>
+                        <input type="text" name="empEmail" value=<%=data[0].empEmail%> placeholder="tony_stark@gmail.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="gender" class="custom-text-light">Gender</label>
+                        <div class="radio inline">
+                            <input type="radio" id="radio-2" name="gender" value=<%=data[0].empGender%>>
+                            <label for="radio-2" class="radio-label custom-text-light">Male</label>
+                        </div>
+                        <div class="radio inline">
+                            <input type="radio" id="radio-3" name="gender" value=<%=data[0].empGender%>>
+                            <label for="radio-3" class="radio-label custom-text-light">Female</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Phone" class="custom-text-light">Phone Number</label>
+                        <input type="number" name="empPhone" value=<%=data[0].empPhone%> placeholder="9999999990">
+                    </div>
+                    <div class="form-group">
+                        <label for="Department" class="custom-text-light">Department</label>
+                        <input type="text" name="empDept" value=<%=data[0].empDept%> placeholder="Department">
+                    </div>
+                    <div class="form-group">
+                        <label for="Salary" class="custom-text-light">Salary</label>
+                        <input type="number" name="empSalary" value=<%=data[0].empSalary%> placeholder="50000">
+                    </div>
+                    <div class="form-group">
+                        <label for="Password" class="custom-text-light">Password</label>
+                        <input type="password" name="empPassword" value=<%=data[0].empPassword%> placeholder="Password for login">
+                    </div>
+                    <div class="form-group">
+                        <label for="gender" class="custom-text-light">Status</label>
+                        <div class="radio inline">
+                            <input type="radio" id="radio-4" name="status" value=<%=data[0].status%> >
+                            <label for="radio-4" class="radio-label custom-text-light">Approved</label>
+                        </div>
+                        <div class="radio inline">
+                            <input type="radio" id="radio-5" name="status" value=<%=data[0].status%> >
+                            <label for="radio-5" class="radio-label custom-text-light">Not Approved</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn text-light update">Submit</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </main>
+    <!-- /Main Site -->
+
+
+    <!-- include footer -->
+    <%- include('include/_footer') %>
+        <!-- /include footer -->

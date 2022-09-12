@@ -1,0 +1,33 @@
+<%- include ('include/header_login') %>
+
+    <body>
+        <section class="login__form">
+            <h3 class="login__heading">
+                Employee Login Here
+            </h3>
+            <form action="/employee-login" method="POST">
+                <label>
+                    Username:
+                </label>
+                <input class="login__input login__email" type="email" name="username" required />
+                <label>
+                    Password:
+                </label>
+                <input class="login__input login__password" type="password" name="password" required />
+                <div class="login__forgot login__password--forgot">
+                    <a href="forgotpassword.html">Forgot password?</a>
+                </div>
+                <button class="login__login login__button" type="submit">
+                    Login
+                </button>
+                <div class="login__create-account">
+                    Don't have an account?
+                    <a href="employee-login/register">
+                        Register    
+                    </a>
+                </div>
+            </form>
+        </section>
+    </body>
+
+    </html>

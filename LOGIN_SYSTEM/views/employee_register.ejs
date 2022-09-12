@@ -1,0 +1,65 @@
+<!-- include header -->
+<%- include('include/_header') %>
+    <!-- /include header -->
+
+    <!-- Main Site -->
+    <main id="site-main">
+        <div class="form-title text-center">
+            <h2 class="text-gradient">Register Here</h2>
+        </div>
+
+        <!-- add user form -->
+        <form action="/employee-login/register" method="POST" id="add_emp">
+            <div class="new_emp">
+                <div class="form-group">
+                    <label for="name" class="custom-text-light">Name</label>
+                    <input type="text" name="name" value="" placeholder="Tony Stark">
+                </div>
+                <div class="form-group">
+                    <label for="Email" class="custom-text-light">Email</label>
+                    <input type="text" name="email" value="" placeholder="tony_stark@gmail.com">
+                </div>
+                <div class="form-group">
+                    <label for="gender" class="custom-text-light">Gender</label>
+                    <div class="radio inline">
+                        <input type="radio" id="radio-2" name="gender" value="M">
+                        <label for="radio-2" class="radio-label">Male</label>
+                    </div>
+                    <div class="radio inline">
+                        <input type="radio" id="radio-3" name="gender" value="F">
+                        <label for="radio-3" class="radio-label">Female</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Phone" class="custom-text-light">Phone Number</label>
+                    <input type="number" name="phone" value="" placeholder="9999999990">
+                </div>
+                <div class="form-group">
+                    <label for="Department" class="custom-text-light">Department</label>
+                    <input type="text" name="department" value="" placeholder="Department">
+                </div>
+                <div class="form-group">
+                    <label for="Salary" class="custom-text-light">Salary</label>
+                    <input type="number" name="salary" value="" placeholder="50000">
+                </div>
+                <div class="form-group">
+                    <label for="Password" class="custom-text-light">Password</label>
+                    <input type="password" name="password" value="" placeholder="Password for login">
+                </div>
+                <div class="form-group">
+                    <label for="status" class="custom-text-light">Status: Not Approved</label>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn text-light update">Submit</button>
+                </div>
+
+            </div>
+        </form>
+
+        </div>
+    </main>
+    <!-- /Main Site -->
+
+    <!-- include footer -->
+    <%- include('include/_footer') %>
+        <!-- /include footer -->

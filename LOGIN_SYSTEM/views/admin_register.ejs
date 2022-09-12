@@ -1,0 +1,57 @@
+<%- include('include/header_login') %>
+
+    <body>
+        <section class="signup__form">
+            <h3 class="signup__heading">
+                Admin Signup Here
+            </h3>
+            <form action="/admin-login/signup" method="POST">
+                <label>
+                    Username:
+                </label>
+                <input class="signup__input signup__name-user" name="username" type="email" required />
+                <label>
+                    Password:
+                </label>
+                <input class="signup__input signup__password" id="p" name="password" type="Password" onkeyup="checkPass()" required />
+                <label>
+                    Confirm Password:
+                </label>
+                <input class="signup__input signup__password-confirm" id="pc" name="password_confirm" type="Password" onkeyup="checkPass()" required />
+                <span id='message'></span>
+                <button class="signup__signup signup__button" type="submit" onclick="submitted()">
+                    Signup
+                </button>
+                <div class="login__create-account">
+                    Already have an account?
+                    <a href="/admin-login">
+                        Login
+                    </a>
+                </div>
+            </form>
+        </section>
+        <script>
+            function checkPass() {
+                const message = document.getElementById("message");
+                const pass = document.getElementById("p").value;
+                const passConfirm = document.getElementById("pc").value;
+                if (pass == passConfirm) {
+                    message.style.color = 'green';
+                    message.innerHTML = 'Password Matched';
+                } else {
+                    message.style.color = 'red';
+                    message.innerHTML = 'Password Not Matching';
+                }
+
+                function submitted() {
+                    if (pass != passConfirm) {
+                        alert("Password Not Matched");
+                    } else {
+                        alert("Signup successfully")
+                    }
+                }
+            }
+        </script>
+
+    </body>
+    <%- include('include/_footer') %>

@@ -1,0 +1,41 @@
+<% for(i=0;i<data.length;i++) { %>
+    <tr>
+        <td>
+            <%=data[i].empId%>
+        </td>
+        <td>
+            <%=data[i].empName%>
+        </td>
+        <td>
+            <%=data[i].empEmail%>
+        </td>
+        <td>
+            <%=data[i].empGender%>
+        </td>
+        <td>
+            <%=data[i].empPhone%>
+        </td>
+        <td>
+            <%=data[i].empDept%>
+        </td>
+        <td>
+            <%=data[i].empSalary%>
+        </td>
+        <td>
+            <%=data[i].empPassword%>
+        </td>
+        <td>
+            <%=data[i].status%>
+        </td>
+        <td>
+            <a href="/admin-login/show-emp/update-emp/<%=data[i].empId%>" class="btn border-shadow update">
+                <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+            </a>
+            <a href="/admin-login/show-emp/delete-emp/<%=data[i].empId%>" class="btn border-shadow delete">
+                <span class="text-gradient"><i class="far fa-trash-alt"></i></span>
+            </a>
+        </td>
+    </tr>
+    <%
+  }
+  %>
